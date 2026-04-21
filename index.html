@@ -84,8 +84,8 @@ nav a.btn-nav:hover { background: var(--red2); }
 #hero {
   min-height: 100vh; display: flex; align-items: center;
   background:
-    linear-gradient(135deg, rgba(13,36,97,.92) 0%, rgba(200,16,46,.75) 100%),
-    url('https://static.wixstatic.com/media/f66883_d30e83e1685941929d03daad0ab082f2~mv2.jpg/v1/crop/x_0,y_37,w_838,h_484/fill/w_838,h_484,al_c,q_80/Helicoptere-1.jpg') center/cover no-repeat;
+    linear-gradient(135deg, rgba(13,36,97,.88) 0%, rgba(200,16,46,.70) 100%),
+    url('images/grande_equipe_dps.jpg') center/cover no-repeat;
   padding-top: 68px;
 }
 .hero-inner { max-width: 1100px; margin: auto; padding: 5rem 2rem; color: #fff; }
@@ -422,13 +422,12 @@ footer {
         </div>
       </div>
       <div>
-        <div class="highlight-box">
-          <h3>Notre engagement quotidien</h3>
-          <p>Chaque week-end, nos bénévoles se mobilisent pour sécuriser des événements dans tout le Pays d'Aix : trails, concerts, manifestations sportives, fêtes de village…</p>
-          <br>
-          <p>Qu'il s'agisse de premiers secours, de surveillance aquatique ou de soutien logistique, nous sommes là pour que chaque événement se déroule en toute sécurité.</p>
-          <br>
-          <button class="btn btn-secondary" onclick="showPage('dps')" style="margin-top:.5rem;">En savoir plus →</button>
+        <div style="position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);">
+          <img src="images/equipe_groupe2.jpg" alt="Équipe SSA13" style="width:100%;height:320px;object-fit:cover;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(13,36,97,.9),transparent);padding:1.5rem;">
+            <p style="color:#fff;font-family:var(--font-h);font-size:1rem;font-weight:700;">🚑 L'équipe SSA13 sur le terrain</p>
+            <button class="btn btn-secondary" onclick="showPage('dps')" style="margin-top:.75rem;font-size:.85rem;">Demander un DPS →</button>
+          </div>
         </div>
       </div>
     </div>
@@ -487,6 +486,26 @@ footer {
             <h3>🏛️ Services aux mairies</h3>
             <p>Sécurité civile et Plans Communaux</p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Strip photos bénévoles accueil -->
+  <section class="section" style="padding-top:0;padding-bottom:2rem;">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;">
+        <div style="border-radius:var(--radius);overflow:hidden;height:180px;">
+          <img src="images/benevoles_duo_terrain.jpg" alt="Bénévoles SSA13" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div style="border-radius:var(--radius);overflow:hidden;height:180px;">
+          <img src="images/equipe_repos.jpg" alt="Équipe SSA13" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div style="border-radius:var(--radius);overflow:hidden;height:180px;">
+          <img src="images/trio_vpsp.jpg" alt="Bénévoles VPSP" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div style="border-radius:var(--radius);overflow:hidden;height:180px;">
+          <img src="images/duo_equipement.jpg" alt="Bénévoles équipement" style="width:100%;height:100%;object-fit:cover;">
         </div>
       </div>
     </div>
@@ -624,6 +643,52 @@ footer {
         <div class="value-card"><div class="value-icon">🎖️</div><h3>Équipes certifiées</h3><p style="color:var(--gray);margin-top:.5rem;font-size:.92rem;">Tous nos intervenants sont titulaires des certifications FFSS (PSE1/PSE2) et formés aux protocoles de premiers secours.</p></div>
         <div class="value-card"><div class="value-icon">🚐</div><h3>Matériel professionnel</h3><p style="color:var(--gray);margin-top:.5rem;font-size:.92rem;">VPSP équipée, défibrillateurs, matériel de triage et de soins. Nous intervenons avec les moyens adaptés à chaque événement.</p></div>
         <div class="value-card"><div class="value-icon">📍</div><h3>Ancrage local</h3><p style="color:var(--gray);margin-top:.5rem;font-size:.92rem;">Basés à Éguilles, nous couvrons principalement le Pays d'Aix et les Bouches-du-Rhône avec une réactivité optimale.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galerie photos DPS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Sur le terrain</div>
+      <h2>Nos équipes en intervention</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-top:1.5rem;">
+        <div style="border-radius:var(--radius);overflow:hidden;height:240px;position:relative;">
+          <img src="images/intervention_boxe1.jpg" alt="Intervention DPS boxe" style="width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(13,36,97,.85),transparent);padding:.9rem;">
+            <span style="color:#fff;font-family:var(--font-h);font-size:.95rem;font-weight:700;">🥊 DPS compétition de boxe</span>
+          </div>
+        </div>
+        <div style="border-radius:var(--radius);overflow:hidden;height:240px;position:relative;">
+          <img src="images/intervention_boxe2.jpg" alt="Intervention bilan victime" style="width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(13,36,97,.85),transparent);padding:.9rem;">
+            <span style="color:#fff;font-family:var(--font-h);font-size:.95rem;font-weight:700;">🏥 Bilan victime en équipe</span>
+          </div>
+        </div>
+        <div style="border-radius:var(--radius);overflow:hidden;height:240px;position:relative;">
+          <img src="images/vpsp_nuit.jpg" alt="VPSP gyrophare nuit" style="width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(13,36,97,.85),transparent);padding:.9rem;">
+            <span style="color:#fff;font-family:var(--font-h);font-size:.95rem;font-weight:700;">🚨 VPSP – intervention nocturne</span>
+          </div>
+        </div>
+        <div style="border-radius:var(--radius);overflow:hidden;height:240px;position:relative;">
+          <img src="images/equipe_moto_vpsp.jpg" alt="Équipe moto et VPSP" style="width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(13,36,97,.85),transparent);padding:.9rem;">
+            <span style="color:#fff;font-family:var(--font-h);font-size:.95rem;font-weight:700;">🏍️ Équipe moto + VPSP</span>
+          </div>
+        </div>
+        <div style="border-radius:var(--radius);overflow:hidden;height:240px;position:relative;">
+          <img src="images/duo_vpsp_cabine.jpg" alt="Équipe en cabine VPSP" style="width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(13,36,97,.85),transparent);padding:.9rem;">
+            <span style="color:#fff;font-family:var(--font-h);font-size:.95rem;font-weight:700;">🚐 En route pour le poste</span>
+          </div>
+        </div>
+        <div style="border-radius:var(--radius);overflow:hidden;height:240px;position:relative;">
+          <img src="images/equipe_vpsp.jpg" alt="Équipe VPSP déployée" style="width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(13,36,97,.85),transparent);padding:.9rem;">
+            <span style="color:#fff;font-family:var(--font-h);font-size:.95rem;font-weight:700;">🏕️ Poste de secours déployé</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
