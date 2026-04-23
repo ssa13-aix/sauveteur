@@ -10,8 +10,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --navy:   #0D2461;
-  --navy2:  #162F7A;
+  --navy:   #0A3880;
+  --navy2:  #1248A8;
   --red:    #C8102E;
   --red2:   #A50D25;
   --gold:   #F5A623;
@@ -36,7 +36,7 @@ img { max-width: 100%; display: block; }
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
   display: flex; align-items: center; justify-content: space-between;
   padding: 0 2rem; height: 68px;
-  background: var(--navy); transition: box-shadow .3s;
+  background: linear-gradient(90deg, #0A3880 0%, #1248A8 100%); transition: box-shadow .3s;
   box-shadow: 0 2px 20px rgba(0,0,0,.3);
 }
 #navbar.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,.4); }
@@ -84,7 +84,7 @@ nav a.btn-nav:hover { background: var(--red2); }
 #hero {
   min-height: 100vh; display: flex; align-items: center;
   background:
-    linear-gradient(135deg, rgba(13,36,97,.88) 0%, rgba(200,16,46,.70) 100%),
+    linear-gradient(135deg, rgba(10,56,128,.85) 0%, rgba(18,72,168,.60) 50%, rgba(200,150,0,.55) 100%),
     url('https://static.wixstatic.com/media/f66883_d30e83e1685941929d03daad0ab082f2~mv2.jpg/v1/fill/w_1200,h_700,al_c,q_85/Helicoptere-1.jpg') top center/cover no-repeat;
   padding-top: 68px;
 }
@@ -159,7 +159,7 @@ h3 { font-family: var(--font-h); font-size: 1.4rem; font-weight: 700; margin-bot
 
 /* ── PAGE HERO (inner pages) ──────────────────────── */
 .page-hero {
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%);
+  background: linear-gradient(135deg, #0A3880 0%, #1248A8 100%);
   padding: 7rem 2rem 3.5rem; color: #fff;
   border-bottom: 4px solid var(--red);
 }
@@ -1154,7 +1154,126 @@ footer {
           </div>
         </div>
       </div>
-      <div style="text-align:center;margin-top:2rem;padding:1.5rem;background:var(--white);border-radius:var(--radius);border:2px dashed var(--border);">
+      <!-- ═══ GRANDE GALERIE BAS DE PAGE ═══ -->
+      <div style="margin-top:2rem;">
+        <div class="section-label" style="margin-bottom:.5rem;">Notre vie d'association</div>
+        <h3 style="font-family:var(--font-h);font-size:1.8rem;font-weight:800;color:var(--navy);margin-bottom:1.25rem;">Des moments qui font la richesse de SSA13</h3>
+
+        <!-- Grande photo groupe -->
+        <div style="border-radius:var(--radius);overflow:hidden;height:320px;position:relative;margin-bottom:1rem;">
+          <img src="grande_photo_groupe.jpg" alt="Grande photo groupe SSA13" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(10,56,128,.9),transparent);padding:1.5rem;">
+            <span style="color:#fff;font-family:var(--font-h);font-size:1.2rem;font-weight:800;">👥 La grande famille SSA13 – formation PSC1 grand public</span>
+          </div>
+        </div>
+
+        <!-- Rangée 3 colonnes -->
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:1rem;">
+          <div style="height:210px;border-radius:var(--radius);overflow:hidden;position:relative;">
+            <img src="fete_foraine_equipe.jpg" alt="Équipe fête foraine" style="width:100%;height:100%;object-fit:cover;">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(10,56,128,.85),transparent);padding:.85rem;">
+              <span style="color:#fff;font-family:var(--font-h);font-size:.92rem;font-weight:700;">🎡 DPS fête foraine</span>
+            </div>
+          </div>
+          <div style="height:210px;border-radius:var(--radius);overflow:hidden;position:relative;">
+            <img src="dps_athletisme_ffss.jpg" alt="DPS athlétisme" style="width:100%;height:100%;object-fit:cover;">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(10,56,128,.85),transparent);padding:.85rem;">
+              <span style="color:#fff;font-family:var(--font-h);font-size:.92rem;font-weight:700;">🏟️ DPS athlétisme – Métropole</span>
+            </div>
+          </div>
+          <div style="height:210px;border-radius:var(--radius);overflow:hidden;position:relative;">
+            <img src="trio_benevoles_soleil.jpg" alt="Trio bénévoles" style="width:100%;height:100%;object-fit:cover;">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(200,150,0,.85),transparent);padding:.85rem;">
+              <span style="color:#fff;font-family:var(--font-h);font-size:.92rem;font-weight:700;">☀️ Bénévoles en tenue FFSS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rangée 2 colonnes largeur variable -->
+        <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:1rem;margin-bottom:1rem;">
+          <div style="height:220px;border-radius:var(--radius);overflow:hidden;position:relative;">
+            <img src="brancard_bord_eau.jpg" alt="Brancardage bord de l'eau" style="width:100%;height:100%;object-fit:cover;">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(10,56,128,.85),transparent);padding:.85rem;">
+              <span style="color:#fff;font-family:var(--font-h);font-size:.92rem;font-weight:700;">🚑 Brancardage – DPS nautique</span>
+            </div>
+          </div>
+          <div style="height:220px;border-radius:var(--radius);overflow:hidden;position:relative;">
+            <img src="duo_poste_rouge.jpg" alt="Duo poste de secours" style="width:100%;height:100%;object-fit:cover;">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(200,150,0,.85),transparent);padding:.85rem;">
+              <span style="color:#fff;font-family:var(--font-h);font-size:.92rem;font-weight:700;">🏥 Poste de secours</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rangée 4 colonnes -->
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:1rem;margin-bottom:1rem;">
+          <div style="height:175px;border-radius:var(--radius);overflow:hidden;position:relative;">
+            <img src="briefing_formation.jpg" alt="Briefing formation" style="width:100%;height:100%;object-fit:cover;">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(10,56,128,.85),transparent);padding:.65rem;">
+              <span style="color:#fff;font-family:var(--font-h);font-size:.82rem;font-weight:700;">📋 Briefing formation</span>
+            </div>
+          </div>
+          <div style="height:175px;border-radius:var(--radius);overflow:hidden;position:relative;">
+            <img src="dps_ring_boxe_thai.jpg" alt="DPS ring boxe thaï" style="width:100%;height:100%;object-fit:cover;">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(10,56,128,.85),transparent);padding:.65rem;">
+              <span style="color:#fff;font-family:var(--font-h);font-size:.82rem;font-weight:700;">🥊 DPS boxe thaï</span>
+            </div>
+          </div>
+          <div style="height:175px;border-radius:var(--radius);overflow:hidden;position:relative;">
+            <img src="vpsp_interieur_nuit.jpg" alt="VPSP intérieur nuit" style="width:100%;height:100%;object-fit:cover;">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(10,56,128,.85),transparent);padding:.65rem;">
+              <span style="color:#fff;font-family:var(--font-h);font-size:.82rem;font-weight:700;">🚐 VPSP – équipement nuit</span>
+            </div>
+          </div>
+          <div style="height:175px;border-radius:var(--radius);overflow:hidden;position:relative;">
+            <img src="equipe_vehicules_lot.jpg" alt="Équipe véhicules" style="width:100%;height:100%;object-fit:cover;">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(200,150,0,.85),transparent);padding:.65rem;">
+              <span style="color:#fff;font-family:var(--font-h);font-size:.82rem;font-weight:700;">🚗 Déplacement interrégional</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rangée formations -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+          <div style="height:220px;border-radius:var(--radius);overflow:hidden;position:relative;">
+            <img src="formation_brancard_fun.jpg" alt="Formation brancardage ambiance" style="width:100%;height:100%;object-fit:cover;">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(10,56,128,.85),transparent);padding:.85rem;">
+              <span style="color:#fff;font-family:var(--font-h);font-size:.92rem;font-weight:700;">😄 Formation PSE – l'ambiance de nos entraînements !</span>
+            </div>
+          </div>
+          <div style="height:220px;border-radius:var(--radius);overflow:hidden;position:relative;">
+            <img src="formation_psc_salle.jpg" alt="Formation PSC salle" style="width:100%;height:100%;object-fit:cover;">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(10,56,128,.85),transparent);padding:.85rem;">
+              <span style="color:#fff;font-family:var(--font-h);font-size:.92rem;font-weight:700;">🎓 Formation PSC – plan d'intervention</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dernière rangée 3 colonnes -->
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:1.5rem;">
+          <div style="height:200px;border-radius:var(--radius);overflow:hidden;position:relative;">
+            <img src="poste_tente_soin.jpg" alt="Poste tente soin" style="width:100%;height:100%;object-fit:cover;">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(10,56,128,.85),transparent);padding:.75rem;">
+              <span style="color:#fff;font-family:var(--font-h);font-size:.88rem;font-weight:700;">⛺ Poste de soin – trail</span>
+            </div>
+          </div>
+          <div style="height:200px;border-radius:var(--radius);overflow:hidden;position:relative;">
+            <img src="dps_marathon_cotier.jpg" alt="DPS marathon côtier" style="width:100%;height:100%;object-fit:cover;">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(200,150,0,.85),transparent);padding:.75rem;">
+              <span style="color:#fff;font-family:var(--font-h);font-size:.88rem;font-weight:700;">🏃 DPS marathon côtier</span>
+            </div>
+          </div>
+          <div style="height:200px;border-radius:var(--radius);overflow:hidden;position:relative;">
+            <img src="soin_vpsp_interieur.jpg" alt="Soin dans VPSP" style="width:100%;height:100%;object-fit:cover;">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(10,56,128,.85),transparent);padding:.75rem;">
+              <span style="color:#fff;font-family:var(--font-h);font-size:.88rem;font-weight:700;">🩺 Soin dans la VPSP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Réseaux sociaux -->
+      <div style="text-align:center;margin-top:1rem;padding:1.5rem;background:var(--white);border-radius:var(--radius);border:2px dashed var(--border);">
         <p style="color:var(--gray);font-size:.92rem;">📸 Retrouvez encore plus de photos sur nos réseaux sociaux</p>
         <div style="display:flex;gap:1rem;justify-content:center;margin-top:1rem;">
           <a href="https://www.instagram.com/ssa13_ffss/" target="_blank" class="btn btn-outline" style="font-size:.88rem;">📷 Instagram @ssa13_ffss</a>
