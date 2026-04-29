@@ -363,6 +363,7 @@ footer {
     <a onclick="showPage('solidaires')" id="nav-solidaires">Actions solidaires</a>
     <a onclick="showPage('valeurs')" id="nav-valeurs">Nos valeurs</a>
     <a onclick="showPage('ffss')" id="nav-ffss">La FFSS</a>
+    <a onclick="showPage('news')" id="nav-news">Actualités</a>
     <a onclick="showPage('rejoindre')" id="nav-rejoindre" class="btn-nav">Nous rejoindre</a>
   </nav>
   <div class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">
@@ -377,6 +378,7 @@ footer {
   <a onclick="showPage('solidaires');toggleMenu()">🤝 Actions solidaires</a>
   <a onclick="showPage('valeurs');toggleMenu()">💙 Nos valeurs</a>
   <a onclick="showPage('ffss');toggleMenu()">🏛️ La FFSS</a>
+  <a onclick="showPage('news');toggleMenu()">📰 Actualités</a>
   <a onclick="showPage('rejoindre');toggleMenu()">➕ Nous rejoindre</a>
 </div>
 
@@ -1823,6 +1825,96 @@ footer {
   </section>
 </div>
 
+
+<!-- ══════════════════════════════════════════════════ -->
+<!-- PAGE : ACTUALITÉS & NEWSLETTER                    -->
+<!-- ══════════════════════════════════════════════════ -->
+<div class="page" id="page-news">
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="section-label">Vie de l'association</div>
+      <h2>📰 Actualités SSA13</h2>
+      <p class="lead">Restez informés de nos interventions, formations, événements et actions solidaires. Abonnez-vous à notre newsletter mensuelle.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-2" style="gap:3rem;align-items:start;">
+
+        <!-- ── COLONNE GAUCHE : ACTUALITÉS ── -->
+        <div>
+          <div class="section-label">Dernières nouvelles</div>
+          <h2>Nos actualités</h2>
+          <p style="color:var(--gray);font-size:.92rem;margin-bottom:2rem;">
+            ✏️ <strong>Pour mettre à jour cette page</strong> : ouvrez le fichier <code style="background:#f0f4fc;padding:.15rem .4rem;border-radius:4px;font-size:.85rem;">index.html</code> sur GitHub, recherchez <code style="background:#f0f4fc;padding:.15rem .4rem;border-radius:4px;font-size:.85rem;">// ═══ ACTUALITÉS À MODIFIER ═══</code> et éditez le tableau <code style="background:#f0f4fc;padding:.15rem .4rem;border-radius:4px;font-size:.85rem;">newsData</code>.
+          </p>
+
+          <div id="news-container"></div>
+        </div>
+
+        <!-- ── COLONNE DROITE : NEWSLETTER ── -->
+        <div style="position:sticky;top:88px;">
+
+          <!-- Newsletter signup -->
+          <div style="background:linear-gradient(135deg,#0A3880,#1248A8);border-radius:var(--radius);padding:2.25rem;color:#fff;margin-bottom:1.5rem;">
+            <div style="font-size:2rem;margin-bottom:.75rem;">📬</div>
+            <h3 style="color:#F5A623;font-family:var(--font-h);font-size:1.4rem;margin-bottom:.75rem;">Newsletter mensuelle</h3>
+            <p style="color:rgba(255,255,255,.82);font-size:.92rem;line-height:1.65;margin-bottom:1.5rem;">Recevez chaque mois un résumé de nos interventions, les prochaines formations, les événements à venir et la vie de l'association.</p>
+            <form id="newsletter-form" onsubmit="submitNewsletter(event)">
+              <div class="form-group" style="margin-bottom:1rem;">
+                <label style="color:rgba(255,255,255,.85);font-size:.85rem;font-weight:600;">Prénom *</label>
+                <input type="text" id="nl-prenom" placeholder="Votre prénom" required
+                  style="width:100%;padding:.7rem 1rem;border:1.5px solid rgba(255,255,255,.3);border-radius:8px;background:rgba(255,255,255,.12);color:#fff;font-family:var(--font-b);">
+              </div>
+              <div class="form-group" style="margin-bottom:1.25rem;">
+                <label style="color:rgba(255,255,255,.85);font-size:.85rem;font-weight:600;">Email *</label>
+                <input type="email" id="nl-email" placeholder="votre@email.fr" required
+                  style="width:100%;padding:.7rem 1rem;border:1.5px solid rgba(255,255,255,.3);border-radius:8px;background:rgba(255,255,255,.12);color:#fff;font-family:var(--font-b);">
+              </div>
+              <div style="margin-bottom:1rem;">
+                <label style="display:flex;align-items:flex-start;gap:.6rem;cursor:pointer;">
+                  <input type="checkbox" id="nl-consent" required style="margin-top:.2rem;width:16px;height:16px;flex-shrink:0;">
+                  <span style="font-size:.78rem;color:rgba(255,255,255,.7);line-height:1.5;">J'accepte de recevoir la newsletter mensuelle de SSA13. Désinscription possible à tout moment.</span>
+                </label>
+              </div>
+              <button type="submit" class="btn" style="width:100%;justify-content:center;background:#F5A623;color:#0A3880;font-weight:800;border:none;">
+                ✉️ S'abonner gratuitement
+              </button>
+            </form>
+            <div id="nl-success" style="display:none;text-align:center;padding:1rem 0;">
+              <div style="font-size:2rem;margin-bottom:.5rem;">🎉</div>
+              <p style="color:#F5A623;font-weight:700;">Inscription confirmée !</p>
+              <p style="color:rgba(255,255,255,.8);font-size:.88rem;margin-top:.35rem;">Vous recevrez notre prochaine newsletter.</p>
+            </div>
+          </div>
+
+          <!-- Réseaux sociaux -->
+          <div style="background:var(--light);border-radius:var(--radius);padding:1.75rem;">
+            <h3 style="font-family:var(--font-h);font-size:1.15rem;color:var(--navy);margin-bottom:1rem;">📱 Suivez-nous</h3>
+            <p style="font-size:.88rem;color:var(--gray);margin-bottom:1.25rem;">Pour ne rien manquer au quotidien, suivez SSA13 sur les réseaux.</p>
+            <div style="display:flex;flex-direction:column;gap:.75rem;">
+              <a href="https://www.instagram.com/ssa13_ffss/" target="_blank"
+                style="display:flex;align-items:center;gap:.85rem;padding:.85rem 1rem;background:#fff;border-radius:8px;border:1.5px solid var(--border);text-decoration:none;transition:all .2s;"
+                onmouseover="this.style.borderColor='#0A3880'" onmouseout="this.style.borderColor='var(--border)'">
+                <span style="font-size:1.4rem;">📷</span>
+                <div><strong style="color:var(--navy);font-size:.92rem;">Instagram</strong><br><span style="font-size:.78rem;color:var(--gray);">@ssa13_ffss</span></div>
+              </a>
+              <a href="https://www.facebook.com/people/Ssa-Ffss/pfbid02ettppD8uDjAcADGf6qRHvLYYNYEJpUQFWS5wGUFe9AvJccJwiYBfBUqkFuuUrNTEl/" target="_blank"
+                style="display:flex;align-items:center;gap:.85rem;padding:.85rem 1rem;background:#fff;border-radius:8px;border:1.5px solid var(--border);text-decoration:none;transition:all .2s;"
+                onmouseover="this.style.borderColor='#0A3880'" onmouseout="this.style.borderColor='var(--border)'">
+                <span style="font-size:1.4rem;">👥</span>
+                <div><strong style="color:var(--navy);font-size:.92rem;">Facebook</strong><br><span style="font-size:.78rem;color:var(--gray);">SSA13 – Sauveteurs Secouristes Aixois</span></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
 <!-- ══ FOOTER ══════════════════════════════════════════ -->
 <footer>
   <div class="footer-inner">
@@ -1848,6 +1940,7 @@ footer {
       </div>
       <div class="footer-col">
         <h4>L'association</h4>
+        <a onclick="showPage('news')">Actualités</a>
         <a onclick="showPage('valeurs')">Nos valeurs</a>
         <a onclick="showPage('ffss')">La FFSS</a>
         <a onclick="showPage('rejoindre')">Nous rejoindre</a>
@@ -1876,9 +1969,10 @@ footer {
 
 <script>
 // ── Navigation ──────────────────────────────────────
-const pages = ['home','dps','formations','sauvetage','solidaires','valeurs','ffss','rejoindre','belage'];
+const pages = ['home','dps','formations','sauvetage','solidaires','valeurs','ffss','rejoindre','belage','news'];
 
 function showPage(id) {
+  if (id === "news") setTimeout(renderNews, 10);
   pages.forEach(p => {
     const el = document.getElementById('page-' + p);
     const nav = document.getElementById('nav-' + p);
@@ -1924,6 +2018,125 @@ function submitForm(e, formId, successId) {
     btn.disabled = false;
   });
 }
+</script>
+
+<script>
+// ═══════════════════════════════════════════════════════════════
+// ═══ ACTUALITÉS À MODIFIER ═══════════════════════════════════
+// Pour ajouter une actu : copiez un bloc {}, collez-le EN PREMIER
+// Catégories : "DPS" | "Formation" | "Solidaire" | "Bel Âge" | "Sport" | "Association"
+// ═══════════════════════════════════════════════════════════════
+const newsData = [
+  {
+    date: "Avril 2026",
+    titre: "DPS Trail Western Azuréenne – Grimaud",
+    texte: "Notre équipe a assuré le dispositif prévisionnel de secours de la Trail Western Azuréenne à Grimaud. 12 bénévoles mobilisés, VPSP déployée, coordination avec les secours locaux. Une belle mission sous le soleil varois !",
+    categorie: "DPS",
+    icon: "🏃"
+  },
+  {
+    date: "Mars 2026",
+    titre: "Formation PSE2 – Promotion printemps 2026",
+    texte: "6 nouveaux bénévoles ont validé leur certification PSE2 ce mois-ci. Félicitations à toute la promotion ! Ces nouveaux chefs d'équipe viennent renforcer notre dispositif opérationnel pour la saison estivale.",
+    categorie: "Formation",
+    icon: "🎓"
+  },
+  {
+    date: "Février 2026",
+    titre: "Programme Bel Âge – Lancement ateliers jardinage",
+    texte: "Le jardin du Bel Âge reprend ses activités avec le lancement de la saison jardinage. Potager surélevé, ateliers aromatiques, yoga du rire… Nos aînés sont de retour avec enthousiasme !",
+    categorie: "Bel Âge",
+    icon: "🌿"
+  },
+  {
+    date: "Janvier 2026",
+    titre: "DPS Championnat de Boxe Thaï – Saint-Rémy",
+    texte: "Intervention lors du championnat de boxe thaï à Saint-Rémy-de-Provence. Équipe de 8 secouristes, 2 prises en charge sur le ring. Mission accomplie avec professionnalisme.",
+    categorie: "DPS",
+    icon: "🥊"
+  },
+  {
+    date: "Décembre 2025",
+    titre: "Collecte humanitaire – Bilan de l'année",
+    texte: "Bilan exceptionnel pour notre collecte humanitaire annuelle : plus de 300 tonnes de matériel acheminé vers les zones en besoin. Merci à tous nos donateurs et bénévoles pour cette mobilisation remarquable.",
+    categorie: "Solidaire",
+    icon: "🌍"
+  },
+  {
+    date: "Novembre 2025",
+    titre: "Assemblée Générale SSA13",
+    texte: "L'Assemblée Générale annuelle de SSA13 s'est tenue à Éguilles. Bilan de l'année, élection du bureau, présentation des projets 2026. Une soirée riche en échanges et en perspectives.",
+    categorie: "Association",
+    icon: "🏛️"
+  }
+];
+
+// ── Couleurs par catégorie ────────────────────────────────────
+const catColors = {
+  "DPS":         { bg: "#e8eef8", border: "#0A3880", text: "#0A3880" },
+  "Formation":   { bg: "#fce8e8", border: "#c8102e", text: "#c8102e" },
+  "Solidaire":   { bg: "#e8f5ee", border: "#1a6b3c", text: "#1a6b3c" },
+  "Bel Âge":    { bg: "#e8f5ee", border: "#1a6b3c", text: "#1a6b3c" },
+  "Sport":       { bg: "#fdf5e6", border: "#c87800", text: "#c87800" },
+  "Association": { bg: "#f0f4fc", border: "#0A3880", text: "#0A3880" }
+};
+
+function renderNews() {
+  const container = document.getElementById('news-container');
+  if (!container) return;
+  container.innerHTML = newsData.map((n, i) => {
+    const c = catColors[n.categorie] || catColors["Association"];
+    return `
+    <article style="background:#fff;border-radius:12px;box-shadow:0 2px 16px rgba(13,36,97,.08);margin-bottom:1.25rem;overflow:hidden;border-left:4px solid ${c.border};transition:transform .2s,box-shadow .2s;"
+      onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 30px rgba(13,36,97,.14)'"
+      onmouseout="this.style.transform='';this.style.boxShadow='0 2px 16px rgba(13,36,97,.08)'">
+      <div style="padding:1.5rem;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;margin-bottom:.85rem;">
+          <div style="display:flex;align-items:center;gap:.6rem;">
+            <span style="font-size:1.3rem;">${n.icon}</span>
+            <span style="background:${c.bg};color:${c.text};font-family:var(--font-h);font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:.25rem .7rem;border-radius:99px;">${n.categorie}</span>
+          </div>
+          <span style="font-size:.8rem;color:var(--gray);font-weight:600;">📅 ${n.date}</span>
+        </div>
+        <h3 style="font-family:var(--font-h);font-size:1.2rem;font-weight:800;color:var(--navy);margin-bottom:.65rem;line-height:1.25;">${n.titre}</h3>
+        <p style="color:var(--gray);font-size:.92rem;line-height:1.7;margin:0;">${n.texte}</p>
+      </div>
+    </article>`;
+  }).join('');
+}
+
+// Newsletter submit
+function submitNewsletter(e) {
+  e.preventDefault();
+  const prenom = document.getElementById('nl-prenom').value;
+  const email  = document.getElementById('nl-email').value;
+  const btn    = e.target.querySelector('button[type=submit]');
+  btn.textContent = 'Envoi…';
+  btn.disabled = true;
+
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      access_key: 'VOTRE_CLE_WEB3FORMS',
+      subject: 'Inscription Newsletter SSA13',
+      from_name: prenom,
+      email: email,
+      message: `Nouvelle inscription newsletter : ${prenom} – ${email}`
+    })
+  }).then(r => r.json()).then(d => {
+    document.getElementById('newsletter-form').style.display = 'none';
+    document.getElementById('nl-success').style.display = 'block';
+  }).catch(() => {
+    btn.textContent = 'Erreur – réessayer';
+    btn.disabled = false;
+  });
+}
+
+// Init au chargement
+document.addEventListener('DOMContentLoaded', renderNews);
+// Re-render quand on navigue vers la page news
+const _origShowPage = showPage;
 </script>
 </body>
 </html>
