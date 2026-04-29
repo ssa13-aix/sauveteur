@@ -2177,6 +2177,59 @@ footer {
   </section>
 
   <!-- Comment nous aider -->
+
+  <!-- ═══ GALERIE PHOTOS HUMANITAIRES ═══ -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:2rem;">
+        <div class="section-label" style="color:#8b0a1f;">Nos missions en images</div>
+        <h2>Sur le terrain avec nos équipes</h2>
+      </div>
+
+      <!-- Grande photo pleine largeur -->
+      <div style="border-radius:var(--radius);overflow:hidden;height:340px;position:relative;margin-bottom:1rem;">
+        <img src="convoi_camion_materiel.jpg" alt="Convoi humanitaire chargement" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;">
+        <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(139,10,31,.9),transparent);padding:1.5rem;">
+          <span style="color:#fff;font-family:var(--font-h);font-size:1.15rem;font-weight:800;">🚚 Chargement d'un convoi humanitaire — des tonnes de matériel médical prêtes à partir vers l'Ukraine</span>
+        </div>
+      </div>
+
+      <!-- 3 photos rangée -->
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;">
+        <div style="height:240px;border-radius:var(--radius);overflow:hidden;position:relative;">
+          <img src="convoi_ukraine_drapeaux.jpg" alt="Convoi Ukraine drapeaux" style="width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,48,135,.88),transparent);padding:.9rem;">
+            <span style="color:#fff;font-family:var(--font-h);font-size:.92rem;font-weight:700;">🇫🇷🇺🇦 Départ convoi – France / Ukraine</span>
+          </div>
+        </div>
+        <div style="height:240px;border-radius:var(--radius);overflow:hidden;position:relative;">
+          <img src="equipe_filets_groupe.jpg" alt="Équipe bénévoles solidarité" style="width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(139,10,31,.85),transparent);padding:.9rem;">
+            <span style="color:#fff;font-family:var(--font-h);font-size:.92rem;font-weight:700;">👥 L'équipe solidaire SSA13 mobilisée</span>
+          </div>
+        </div>
+        <div style="height:240px;border-radius:var(--radius);overflow:hidden;position:relative;">
+          <img src="benevoles_filets.jpg" alt="Bénévoles préparation matériel" style="width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(139,10,31,.85),transparent);padding:.9rem;">
+            <span style="color:#fff;font-family:var(--font-h);font-size:.92rem;font-weight:700;">📦 Tri et préparation du matériel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ NEWS HUMANITAIRES ═══ -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:2.5rem;">
+        <div class="section-label" style="color:#8b0a1f;">Actualités solidaires</div>
+        <h2>Les dernières nouvelles de nos missions</h2>
+        <p class="lead">Chaque mois, retrouvez ici les temps forts de nos actions humanitaires et solidaires.</p>
+      </div>
+      <div id="huma-news-container"></div>
+    </div>
+  </section>
+
   <section id="don-section" class="section" style="background:linear-gradient(135deg,#8b0a1f,#0A3880);">
     <div class="container">
       <div class="text-center" style="margin-bottom:2.5rem;">
@@ -2294,6 +2347,7 @@ const pages = ['home','dps','formations','sauvetage','solidaires','valeurs','ffs
 
 function showPage(id) {
   if (id === "news") setTimeout(renderNews, 10);
+  if (id === "humanitaire") setTimeout(renderHumaNews, 10);
   pages.forEach(p => {
     const el = document.getElementById('page-' + p);
     const nav = document.getElementById('nav-' + p);
@@ -2451,6 +2505,55 @@ function submitNewsletter(e) {
 document.addEventListener('DOMContentLoaded', renderNews);
 // Re-render quand on navigue vers la page news
 const _origShowPage = showPage;
+</script>
+
+<script>
+// ═══════════════════════════════════════════════════
+// ═══ NEWS HUMANITAIRES À MODIFIER ═══════════════
+// Max 3 affichées — ajoutez EN PREMIER, supprimez la plus ancienne
+// ═══════════════════════════════════════════════════
+const humaNewsData = [
+  {
+    date: "Avril 2026",
+    titre: "12ème convoi pour l'Ukraine – départ depuis Rognes",
+    texte: "Nouveau départ de convoi humanitaire en direction de l'Ukraine ! Grâce à la mobilisation exceptionnelle de nos bénévoles et de nos partenaires, un camion chargé de matériel médical, de fauteuils roulants et d'articles de première nécessité a quitté Rognes à destination d'Ouman. Un moment fort de solidarité franco-ukrainienne, sous les drapeaux des deux pays. Merci à tous les donateurs et à l'équipe SOS Ouman pour leur coordination sans faille.",
+    badge: "🇺🇦 Ukraine",
+    couleur: "#003087"
+  },
+  {
+    date: "Mars 2026",
+    titre: "Collecte & tri de matériel – action solidaire",
+    texte: "Nos bénévoles se sont mobilisés pour le tri et la préparation d'un important lot de matériel destiné à nos prochains convois humanitaires. Une journée de travail collectif, dans la bonne humeur, pour préparer au mieux les expéditions à venir. Chaque geste compte — du tri minutieux jusqu'à l'emballage soigneux de chaque colis.",
+    badge: "📦 Collecte",
+    couleur: "#8b0a1f"
+  },
+  {
+    date: "Février 2026",
+    titre: "Bilan – plus de 320 tonnes acheminées depuis le début",
+    texte: "L'heure du bilan pour nos actions humanitaires : depuis le lancement de nos missions solidaires, ce sont plus de 320 tonnes de matériel médical et sanitaire qui ont été collectées et acheminées vers les zones de crise. 11 convois organisés, des centaines de colis expédiés, et des milliers de personnes bénéficiaires. Merci à chacun de vous qui rendez tout cela possible.",
+    badge: "📊 Bilan",
+    couleur: "#1a6b3c"
+  }
+];
+
+function renderHumaNews() {
+  const c = document.getElementById('huma-news-container');
+  if (!c) return;
+  c.innerHTML = humaNewsData.slice(0,3).map(n => `
+    <article style="background:#fff;border-radius:12px;box-shadow:0 2px 16px rgba(13,36,97,.08);margin-bottom:1.25rem;overflow:hidden;border-left:5px solid ${n.couleur};transition:transform .2s,box-shadow .2s;"
+      onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 30px rgba(13,36,97,.14)'"
+      onmouseout="this.style.transform='';this.style.boxShadow='0 2px 16px rgba(13,36,97,.08)'">
+      <div style="padding:1.75rem;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem;">
+          <span style="background:${n.couleur}18;color:${n.couleur};font-family:var(--font-h);font-size:.75rem;font-weight:700;letter-spacing:1px;padding:.3rem .85rem;border-radius:99px;border:1.5px solid ${n.couleur}40;">${n.badge}</span>
+          <span style="font-size:.82rem;color:var(--gray);font-weight:600;">📅 ${n.date}</span>
+        </div>
+        <h3 style="font-family:var(--font-h);font-size:1.2rem;font-weight:800;color:${n.couleur};margin-bottom:.75rem;line-height:1.25;">${n.titre}</h3>
+        <p style="color:var(--gray);font-size:.92rem;line-height:1.75;margin:0;">${n.texte}</p>
+      </div>
+    </article>`).join('');
+}
+document.addEventListener('DOMContentLoaded', renderHumaNews);
 </script>
 </body>
 </html>
