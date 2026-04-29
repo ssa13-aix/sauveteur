@@ -1021,6 +1021,7 @@ footer {
             <div class="card-tag">Solidarité internationale</div>
             <h3>Missions humanitaires</h3>
             <p>SSA13 participe à des collectes et missions d'aide humanitaire internationale, notamment en soutien aux populations en détresse (Ukraine, zones de crise). Matériel médical, produits de première nécessité, coordination avec les associations partenaires.</p>
+            <button onclick="showPage('humanitaire')" class="btn btn-outline" style="margin-top:1rem;font-size:.85rem;width:100%;justify-content:center;">🌍 Découvrir nos missions →</button>
           </div>
         </div>
         <div class="card">
@@ -1982,6 +1983,259 @@ footer {
   </section>
 </div>
 
+
+<!-- ══════════════════════════════════════════════════ -->
+<!-- PAGE : ACTIONS HUMANITAIRES                       -->
+<!-- ══════════════════════════════════════════════════ -->
+<div class="page" id="page-humanitaire">
+
+  <!-- Hero -->
+  <div style="background:linear-gradient(135deg,#8b0a1f 0%,#0A3880 60%,#1248A8 100%);padding:7rem 2rem 3.5rem;color:#fff;border-bottom:4px solid #F5A623;">
+    <div class="container">
+      <div style="font-family:var(--font-h);font-size:.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#F5A623;margin-bottom:.6rem;">Action solidaire SSA13</div>
+      <h2 style="font-family:var(--font-h);font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;line-height:1.05;margin-bottom:1rem;">🌍 Actions Humanitaires</h2>
+      <p style="font-size:1.05rem;color:rgba(255,255,255,.82);max-width:700px;line-height:1.7;margin-bottom:1.5rem;">Partout où cela est nécessaire — nous croyons en la solidarité et la coopération pour construire une société plus juste. Collectes, convois, soins et soutien aux populations en détresse à travers le monde.</p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+        <button class="btn btn-primary" onclick="showPage('rejoindre')">🤝 Nous rejoindre</button>
+        <button class="btn btn-secondary" onclick="document.getElementById('don-section').scrollIntoView({behavior:'smooth'})">💛 Faire un don</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chiffres clés -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:2.5rem;">
+        <div class="section-label" style="color:#8b0a1f;">À ce jour</div>
+        <h2>Nos actions en chiffres</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+        <div style="background:#fff;padding:2rem;border-radius:var(--radius);text-align:center;box-shadow:var(--shadow);border-bottom:4px solid #8b0a1f;">
+          <div style="font-family:var(--font-h);font-size:3rem;font-weight:800;color:#8b0a1f;line-height:1;">320t+</div>
+          <div style="font-family:var(--font-h);font-size:1rem;font-weight:700;color:var(--navy);margin-top:.4rem;">Tonnes de matériel acheminées</div>
+          <p style="color:var(--gray);font-size:.85rem;margin-top:.5rem;line-height:1.55;">Matériel médical, médicaments, équipements de secours et articles de première nécessité.</p>
+        </div>
+        <div style="background:#fff;padding:2rem;border-radius:var(--radius);text-align:center;box-shadow:var(--shadow);border-bottom:4px solid #0A3880;">
+          <div style="font-family:var(--font-h);font-size:3rem;font-weight:800;color:#0A3880;line-height:1;">11</div>
+          <div style="font-family:var(--font-h);font-size:1rem;font-weight:700;color:var(--navy);margin-top:.4rem;">Convois internationaux</div>
+          <p style="color:var(--gray);font-size:.85rem;margin-top:.5rem;line-height:1.55;">Convois de matériel médical et sanitaire vers les zones de crise et de conflit.</p>
+        </div>
+        <div style="background:#fff;padding:2rem;border-radius:var(--radius);text-align:center;box-shadow:var(--shadow);border-bottom:4px solid #F5A623;">
+          <div style="font-family:var(--font-h);font-size:3rem;font-weight:800;color:#c87800;line-height:1;">250+</div>
+          <div style="font-family:var(--font-h);font-size:1rem;font-weight:700;color:var(--navy);margin-top:.4rem;">Colis expédiés vers l'Ukraine</div>
+          <p style="color:var(--gray);font-size:.85rem;margin-top:.5rem;line-height:1.55;">À destination de l'hôpital municipal d'Ouman, en collaboration avec SOS Ouman.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notre démarche -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2" style="gap:3rem;align-items:center;">
+        <div>
+          <div class="section-label" style="color:#8b0a1f;">Notre approche</div>
+          <h2>Entraide · Humanitaire · Solidarité</h2>
+          <p style="color:var(--gray);line-height:1.75;margin-bottom:1.25rem;">De nombreuses zones dans le monde traversent des crises sanitaires majeures, exacerbées par les conflits armés. Chaque jour, des hommes, des femmes et des enfants nécessitent des soins médicaux urgents. Dans ce contexte, <strong style="color:var(--navy);">chaque aide, chaque geste compte.</strong></p>
+          <p style="color:var(--gray);line-height:1.75;margin-bottom:1.75rem;">Nos actions humanitaires reposent sur quatre piliers complémentaires, de la collecte jusqu'à la distribution sur le terrain, en coordination avec des associations locales de confiance.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            <div style="padding:1.25rem;background:var(--light);border-radius:10px;text-align:center;">
+              <div style="font-size:1.8rem;margin-bottom:.5rem;">📦</div>
+              <strong style="color:var(--navy);font-size:.92rem;">Collecter</strong>
+              <p style="font-size:.8rem;color:var(--gray);margin-top:.25rem;">Rassembler fournitures médicales, médicaments et articles de première nécessité</p>
+            </div>
+            <div style="padding:1.25rem;background:var(--light);border-radius:10px;text-align:center;">
+              <div style="font-size:1.8rem;margin-bottom:.5rem;">🔍</div>
+              <strong style="color:var(--navy);font-size:.92rem;">Contrôler</strong>
+              <p style="font-size:.8rem;color:var(--gray);margin-top:.25rem;">Vérifier la qualité et la pertinence des dons avec notre équipe médicale</p>
+            </div>
+            <div style="padding:1.25rem;background:var(--light);border-radius:10px;text-align:center;">
+              <div style="font-size:1.8rem;margin-bottom:.5rem;">🚚</div>
+              <strong style="color:var(--navy);font-size:.92rem;">Distribuer</strong>
+              <p style="font-size:.8rem;color:var(--gray);margin-top:.25rem;">Acheminer vers les zones touchées via nos associations partenaires locales</p>
+            </div>
+            <div style="padding:1.25rem;background:var(--light);border-radius:10px;text-align:center;">
+              <div style="font-size:1.8rem;margin-bottom:.5rem;">🩺</div>
+              <strong style="color:var(--navy);font-size:.92rem;">Soigner</strong>
+              <p style="font-size:.8rem;color:var(--gray);margin-top:.25rem;">Soutenir les structures de soins locales et le personnel médical sur place</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img src="https://static.wixstatic.com/media/a69c6b_1f0de003ba154f8292e0aa945c076f19~mv2.jpg/v1/fill/w_800,h_550,al_c,q_85/WhatsApp%20Image%202024-06-26%20%C3%A0%2012_05_45_de6aec79.jpg"
+               alt="Team actions solidaires SSA13"
+               style="width:100%;height:320px;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:1rem;">
+          <div style="background:linear-gradient(135deg,#8b0a1f,#0A3880);border-radius:var(--radius);padding:1.25rem;color:#fff;text-align:center;">
+            <p style="font-family:var(--font-h);font-size:1rem;font-weight:700;color:#F5A623;">❤️ Ensemble, nous continuons d'apporter espoir et soutien là où c'est nécessaire.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Actions phares -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:2.5rem;">
+        <div class="section-label" style="color:#8b0a1f;">Missions emblématiques</div>
+        <h2>Nos actions sur le terrain</h2>
+      </div>
+
+      <!-- Ukraine -->
+      <div style="background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;margin-bottom:1.5rem;">
+        <div style="background:linear-gradient(90deg,#003087,#FFD700);height:5px;"></div>
+        <div class="grid-2" style="gap:0;align-items:stretch;">
+          <div style="padding:2rem 2rem 2rem 2rem;">
+            <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1rem;">
+              <span style="font-size:1.8rem;">🇺🇦</span>
+              <div>
+                <div style="font-family:var(--font-h);font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#8b0a1f;">Mission en cours</div>
+                <h3 style="font-size:1.25rem;color:var(--navy);">Convois humanitaires pour l'Ukraine</h3>
+              </div>
+            </div>
+            <p style="color:var(--gray);font-size:.93rem;line-height:1.75;margin-bottom:1rem;">C'est autour de notre Médecin <strong style="color:var(--navy);">Daniel</strong> et de <strong style="color:var(--navy);">Cécile</strong>, notre responsable actions solidaires, que la chaîne de solidarité continue à s'organiser dans la collecte et le transfert de matériel médical et de soins vers l'Ukraine.</p>
+            <p style="color:var(--gray);font-size:.93rem;line-height:1.75;margin-bottom:1.25rem;">En collaboration avec l'association <strong style="color:var(--navy);">SOS Ouman</strong> et son président Denis HIAULT, et la société <strong style="color:var(--navy);">AVEMAT CHERAKI</strong> qui nous offre gracieusement le stockage du matériel, nous avons pu faire partir plus de <strong style="color:#8b0a1f;">250 colis</strong> à destination de l'hôpital municipal d'Ouman en Ukraine.</p>
+            <div style="background:#f8f9fc;border-left:3px solid #FFD700;padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin-bottom:1.25rem;">
+              <p style="font-size:.88rem;color:var(--gray);line-height:1.65;font-style:italic;">Nous avons eu l'immense plaisir de recevoir la reconnaissance officielle de la ville d'Ouman en Ukraine, en remerciement pour l'aide précieuse apportée à son hôpital. Un immense merci au Dr Daniel Cohen, à Denis HIAULT (SOS Ouman) et à l'association Actions Sans Frontières.</p>
+            </div>
+            <img src="https://static.wixstatic.com/media/a69c6b_86e725ee395c4f4381927971e7a6cf96~mv2.jpg/v1/fill/w_600,h_400,al_c,q_85/"
+                 alt="Lettre de remerciement Ukraine"
+                 style="width:100%;height:180px;object-fit:cover;border-radius:8px;">
+          </div>
+          <div style="background:linear-gradient(135deg,#001f5b,#003087);padding:2rem;display:flex;flex-direction:column;justify-content:center;gap:1.25rem;">
+            <img src="https://static.wixstatic.com/media/a69c6b_a74f76df49d542f3afe95ef16608cd78~mv2.jpg/v1/fill/w_600,h_400,al_c,q_85/"
+                 alt="Convoi Ukraine"
+                 style="width:100%;height:180px;object-fit:cover;border-radius:8px;">
+            <img src="https://static.wixstatic.com/media/a69c6b_3f9f4b7cfaa74a0486c389de3883c9e1~mv2.jpg/v1/fill/w_600,h_400,al_c,q_85/"
+                 alt="Action Ukraine"
+                 style="width:100%;height:180px;object-fit:cover;border-radius:8px;">
+            <div style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:1rem;text-align:center;">
+              <div style="font-family:var(--font-h);font-size:2rem;font-weight:800;color:#FFD700;">250+</div>
+              <div style="color:rgba(255,255,255,.85);font-size:.85rem;">colis expédiés vers Ouman</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Oran -->
+      <div style="background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;">
+        <div style="background:linear-gradient(90deg,#006233,#EAB020);height:5px;"></div>
+        <div style="padding:2rem;">
+          <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1rem;">
+            <span style="font-size:1.8rem;">🇩🇿</span>
+            <div>
+              <div style="font-family:var(--font-h);font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#1a6b3c;">Mission accomplie</div>
+              <h3 style="font-size:1.25rem;color:var(--navy);">Aide aux enfants malades d'Oran</h3>
+            </div>
+          </div>
+          <p style="color:var(--gray);font-size:.93rem;line-height:1.75;">Grâce aux efforts de notre <strong style="color:var(--navy);">Docteur Daniel Cohen</strong>, l'association d'Aide aux Enfants Cancéreux d'Oran a reçu des médicaments à haute valeur ajoutée pour les enfants qui en avaient grandement besoin. Une action menée avec discrétion et efficacité, au service des plus vulnérables.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Types d'actions -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:2.5rem;">
+        <div class="section-label" style="color:#8b0a1f;">Ce que nous faisons</div>
+        <h2>Nos domaines d'intervention</h2>
+      </div>
+      <div class="grid-3">
+        <div style="padding:1.75rem;border-radius:var(--radius);border:2px solid var(--border);transition:all .25s;" onmouseover="this.style.borderColor='#8b0a1f';this.style.boxShadow='var(--shadow)'" onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">
+          <div style="font-size:2rem;margin-bottom:1rem;">🏥</div>
+          <h3 style="color:var(--navy);margin-bottom:.65rem;">Soutien médical</h3>
+          <p style="color:var(--gray);font-size:.9rem;line-height:1.65;">Fournitures médicales, médicaments, équipements de secours vers les hôpitaux et structures de soins dans les zones de crise ou de conflit.</p>
+        </div>
+        <div style="padding:1.75rem;border-radius:var(--radius);border:2px solid var(--border);transition:all .25s;" onmouseover="this.style.borderColor='#8b0a1f';this.style.boxShadow='var(--shadow)'" onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">
+          <div style="font-size:2rem;margin-bottom:1rem;">🤲</div>
+          <h3 style="color:var(--navy);margin-bottom:.65rem;">Soutien aux personnes précaires</h3>
+          <p style="color:var(--gray);font-size:.9rem;line-height:1.65;">Aide spécifique aux personnes en situation de précarité, en répondant à leurs besoins essentiels et en les accompagnant lors d'événements majeurs.</p>
+        </div>
+        <div style="padding:1.75rem;border-radius:var(--radius);border:2px solid var(--border);transition:all .25s;" onmouseover="this.style.borderColor='#8b0a1f';this.style.boxShadow='var(--shadow)'" onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">
+          <div style="font-size:2rem;margin-bottom:1rem;">🌱</div>
+          <h3 style="color:var(--navy);margin-bottom:.65rem;">Renforcement local</h3>
+          <p style="color:var(--gray);font-size:.9rem;line-height:1.65;">Collaboration avec des organisations locales pour assurer que l'aide arrive directement aux personnes dans le besoin et renforcer les capacités locales.</p>
+        </div>
+        <div style="padding:1.75rem;border-radius:var(--radius);border:2px solid var(--border);transition:all .25s;" onmouseover="this.style.borderColor='#8b0a1f';this.style.boxShadow='var(--shadow)'" onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">
+          <div style="font-size:2rem;margin-bottom:1rem;">👨‍👩‍👧‍👦</div>
+          <h3 style="color:var(--navy);margin-bottom:.65rem;">Lien intergénérationnel</h3>
+          <p style="color:var(--gray);font-size:.9rem;line-height:1.65;">Programmes de mentorat et événements rassemblant jeunes et seniors pour favoriser l'échange, le partage de savoirs et l'entraide mutuelle.</p>
+        </div>
+        <div style="padding:1.75rem;border-radius:var(--radius);border:2px solid var(--border);transition:all .25s;" onmouseover="this.style.borderColor='#8b0a1f';this.style.boxShadow='var(--shadow)'" onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">
+          <div style="font-size:2rem;margin-bottom:1rem;">✈️</div>
+          <h3 style="color:var(--navy);margin-bottom:.65rem;">Envoi international</h3>
+          <p style="color:var(--gray);font-size:.9rem;line-height:1.65;">Expédition rapide vers les zones touchées par des crises humanitaires, catastrophes naturelles ou conflits armés, pour une aide immédiate et vitale.</p>
+        </div>
+        <div style="padding:1.75rem;border-radius:var(--radius);border:2px solid var(--border);transition:all .25s;" onmouseover="this.style.borderColor='#8b0a1f';this.style.boxShadow='var(--shadow)'" onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">
+          <div style="font-size:2rem;margin-bottom:1rem;">🤝</div>
+          <h3 style="color:var(--navy);margin-bottom:.65rem;">Partenariats associatifs</h3>
+          <p style="color:var(--gray);font-size:.9rem;line-height:1.65;">Coordination avec SOS Ouman, Actions Sans Frontières et d'autres associations pour maximiser l'impact de chaque action solidaire.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comment nous aider -->
+  <section id="don-section" class="section" style="background:linear-gradient(135deg,#8b0a1f,#0A3880);">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:2.5rem;">
+        <div style="font-family:var(--font-h);font-size:.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#F5A623;margin-bottom:.6rem;">Agissez avec nous</div>
+        <h2 style="color:#fff;">Comment nous aider ?</h2>
+        <p style="color:rgba(255,255,255,.78);max-width:600px;margin:.75rem auto 0;line-height:1.65;">Nos actions reposent entièrement sur la générosité et la solidarité de personnes comme vous. Merci de vous tenir à nos côtés dans ces moments cruciaux.</p>
+      </div>
+      <div class="grid-2" style="gap:1.5rem;">
+        <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius);padding:1.75rem;">
+          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
+            <span style="font-size:1.75rem;">💰</span>
+            <h3 style="color:#F5A623;font-size:1.1rem;">Faire un don</h3>
+          </div>
+          <p style="color:rgba(255,255,255,.8);font-size:.9rem;line-height:1.65;">Chaque euro compte. Votre contribution financière nous permet de financer les convois de matériel médical et d'autres ressources essentielles pour soutenir les hôpitaux et structures de soins.</p>
+          <a href="mailto:contact@ssa-13.org?subject=Don humanitaire SSA13" class="btn" style="margin-top:1.25rem;background:#F5A623;color:#0A3880;font-weight:800;border:none;display:inline-flex;">💛 Nous contacter pour un don</a>
+        </div>
+        <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius);padding:1.75rem;">
+          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
+            <span style="font-size:1.75rem;">🙋</span>
+            <h3 style="color:#F5A623;font-size:1.1rem;">Devenir bénévole</h3>
+          </div>
+          <p style="color:rgba(255,255,255,.8);font-size:.9rem;line-height:1.65;">Notre force repose sur le dévouement de nos bénévoles. Si vous pouvez consacrer du temps ou des compétences — logistique, médical, administratif — nous serions heureux de vous accueillir.</p>
+          <button onclick="showPage('rejoindre')" class="btn" style="margin-top:1.25rem;background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.3);">➕ Rejoindre l'équipe</button>
+        </div>
+        <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius);padding:1.75rem;">
+          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
+            <span style="font-size:1.75rem;">📢</span>
+            <h3 style="color:#F5A623;font-size:1.1rem;">Nous soutenir</h3>
+          </div>
+          <p style="color:rgba(255,255,255,.8);font-size:.9rem;line-height:1.65;">Partagez nos actions sur les réseaux sociaux, avec votre famille, vos amis et vos collègues. Plus nous sommes visibles, plus nous pouvons mobiliser de ressources.</p>
+          <div style="display:flex;gap:.75rem;margin-top:1.25rem;">
+            <a href="https://www.instagram.com/ssa13_ffss/" target="_blank" class="btn" style="background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.3);font-size:.85rem;">📷 Instagram</a>
+            <a href="https://www.facebook.com/people/Ssa-Ffss/pfbid02ettppD8uDjAcADGf6qRHvLYYNYEJpUQFWS5wGUFe9AvJccJwiYBfBUqkFuuUrNTEl/" target="_blank" class="btn" style="background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.3);font-size:.85rem;">👥 Facebook</a>
+          </div>
+        </div>
+        <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius);padding:1.75rem;">
+          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
+            <span style="font-size:1.75rem;">🏢</span>
+            <h3 style="color:#F5A623;font-size:1.1rem;">Partenariats</h3>
+          </div>
+          <p style="color:rgba(255,255,255,.8);font-size:.9rem;line-height:1.65;">Si vous représentez une entreprise, une institution ou un autre organisme, envisagez un partenariat avec nous. Ensemble, nous pouvons maximiser notre impact sur le terrain.</p>
+          <a href="mailto:contact@ssa-13.org?subject=Partenariat humanitaire SSA13" class="btn" style="margin-top:1.25rem;background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.3);">✉️ Nous écrire</a>
+        </div>
+      </div>
+
+      <!-- Partenaires -->
+      <div style="margin-top:2.5rem;background:rgba(255,255,255,.07);border-radius:var(--radius);padding:1.75rem;text-align:center;">
+        <p style="color:rgba(255,255,255,.6);font-size:.78rem;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-bottom:1.25rem;">Nos partenaires associatifs</p>
+        <div style="display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center;">
+          <div style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:.7rem 1.25rem;border-radius:8px;color:rgba(255,255,255,.85);font-size:.88rem;font-weight:600;">🇺🇦 SOS Ouman – Denis HIAULT</div>
+          <div style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:.7rem 1.25rem;border-radius:8px;color:rgba(255,255,255,.85);font-size:.88rem;font-weight:600;">🌍 Actions Sans Frontières</div>
+          <div style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:.7rem 1.25rem;border-radius:8px;color:rgba(255,255,255,.85);font-size:.88rem;font-weight:600;">📦 AVEMAT CHERAKI – stockage</div>
+          <div style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:.7rem 1.25rem;border-radius:8px;color:rgba(255,255,255,.85);font-size:.88rem;font-weight:600;">🩺 Dr Daniel Cohen – coordinateur médical</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
 <!-- ══ FOOTER ══════════════════════════════════════════ -->
 <footer>
   <div class="footer-inner">
@@ -2036,7 +2290,7 @@ footer {
 
 <script>
 // ── Navigation ──────────────────────────────────────
-const pages = ['home','dps','formations','sauvetage','solidaires','valeurs','ffss','rejoindre','belage','news'];
+const pages = ['home','dps','formations','sauvetage','solidaires','valeurs','ffss','rejoindre','belage','news','humanitaire'];
 
 function showPage(id) {
   if (id === "news") setTimeout(renderNews, 10);
